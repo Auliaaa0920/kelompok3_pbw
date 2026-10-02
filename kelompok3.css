@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 10% 20%, #ffd6e8 0 8%, transparent 9%),
+        radial-gradient(circle at 90% 80%, #e7dcff 0 8%, transparent 9%),
+        linear-gradient(135deg, #ffd9e8, #fff0f6, #e7e1ff);
+    font-family: Arial, sans-serif;
+    color: #6d4b73;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    background: rgba(255, 250, 253, 0.92);
+    border: 4px solid #8c82d9;
+    border-radius: 25px;
+    padding: 35px 45px;
+    box-shadow:
+        8px 8px 0 #f2b9d3,
+        0 10px 30px rgba(120, 80, 120, 0.15);
+    position: relative;
+}
+
+.small-icon {
+    width: 55px;
+    height: 55px;
+    border: 3px solid #d78bb4;
+    border-radius: 12px;
+    background: #fff5fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+    margin-bottom: -20px;
+}
+
+.profile {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0 25px;
+}
+
+.profile-wrapper {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding: 7px;
+    background: white;
+    border: 5px solid #8c82d9;
+    box-shadow: 0 0 0 5px #f5c9df;
+    overflow: hidden;
+}
+
+.profile-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.speech {
+    position: absolute;
+    margin-left: 220px;
+    margin-top: -80px;
+    background: #f5e8ff;
+    color: #624b76;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    border: 3px solid #8c82d9;
+}
+
+.speech::after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    bottom: -15px;
+    width: 20px;
+    height: 20px;
+    background: #f5e8ff;
+    border-left: 3px solid #8c82d9;
+    border-bottom: 3px solid #8c82d9;
+    transform: rotate(-25deg);
+}
+
+.name-box {
+    background: linear-gradient(
+        90deg,
+        #ffd9e9,
+        #eee3ff,
+        #ffd9e9
+    );
+
+    border: 4px solid #8c82d9;
+    padding: 18px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 6px 6px 0 #f2b9d3;
+}
+
+.name-box h1 {
+    font-size: 35px;
+    color: #76547d;
+    text-shadow:
+        2px 2px white,
+        3px 3px #d9b3e8;
+    letter-spacing: 1px;
+}
+
+
+.description {
+    text-align: center;
+    margin: 25px 0;
+    font-size: 21px;
+    font-weight: bold;
+    color: #725378;
+}
+
+.divider {
+    border-top: 4px dashed #e7a8c9;
+    margin: 25px 0;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 65px;
+    background: linear-gradient(
+        90deg,
+        #ffdcec,
+        #eee7ff
+    );
+    border: 3px solid #a48bd6;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #704f78;
+    font-size: 23px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.menu-button:hover {
+    transform: translateX(7px);
+    background: linear-gradient(
+        90deg,
+        #fbc5df,
+        #ddd1ff
+    );
+    box-shadow: 5px 5px 0 #d59abb;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 5px;
+    color: #74527c;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.mask {
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px 8px;
+    }
+
+    .container {
+        padding: 25px 18px;
+        border-width: 3px;
+    }
+
+    .profile-wrapper {
+        width: 125px;
+        height: 125px;
+    }
+
+    .speech {
+        margin-left: 170px;
+        margin-top: -70px;
+        font-size: 20px;
+        padding: 9px 17px;
+    }
+
+    .name-box h1 {
+        font-size: 25px;
+    }
+
+    .description {
+        font-size: 17px;
+    }
+
+    .menu-button {
+        min-height: 58px;
+        font-size: 20px;
+    }
+}
+
